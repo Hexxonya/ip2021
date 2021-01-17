@@ -49,9 +49,6 @@ class Product(models.Model):
 
     get_sale.short_description = "Sale"
 
-    # def __str__(self):
-    #     return f"{self.name}, {self.category}, {self.vendor}, {self.description}, {self.discount}, {self.price}, {self.get_sale()}"
-
     class Meta:
         verbose_name_plural = "Product"
 
@@ -82,9 +79,6 @@ class Coupon(models.Model):
     vendorCoupon = models.ForeignKey(VendorCoupon, on_delete=models.CASCADE)
     description = models.TextField('Description',)
     code = models.CharField('Code', max_length=50)
-
-    # def __str__(self):
-    #     return f"{self.name}, {self.category}, {self.vendor}, {self.description}, {self.discount}, {self.price}, {self.get_sale()}"
 
     class Meta:
         verbose_name_plural = "Coupon"
